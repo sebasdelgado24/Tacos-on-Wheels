@@ -1,9 +1,15 @@
 ### Schema 
+
 CREATE DATABASE tacos_db;
-SWITCH TO OR USE the `tacos_db`.
-   * Create a `tacos` table with these fields:
-     * **id**: an auto incrementing int that serves as the primary key.
-     * **taco_name**: a string.
-     * **shell**: a string (soft/hard ~ flour/corn)
-     * **vegetarian**: a boolean
-     * **picked_up**: a boolean.
+USE tacos_db;
+
+CREATE TABLE tacos 
+(
+
+     id int NOT NULL AUTO_INCREMENT
+     taco_name varchar(255) NOT NULL,
+     shell varchar(255) NOT NULL,
+     vegetarian BOOLEAN DEFAULT false,
+     picked_up BOOLEAN DEFAULT false,
+     PRIMARY KEY (id)
+);
